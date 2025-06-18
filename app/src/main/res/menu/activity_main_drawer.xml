@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:id="@+id/group_chats">
+        <item
+            android:id="@+id/chats_header"
+            android:title="Chats"
+            android:enabled="false" />
+            
+        <item
+            android:id="@+id/nav_chat_new"
+            android:title="Hi there" />
+            
+        <item
+            android:id="@+id/nav_chat_automation"
+            android:title="AI-Driven Android Automation" />
+            
+        <item
+            android:id="@+id/nav_chat_architecture"
+            android:title="Android AI Agent Architecture" />
+            
+        <item
+            android:id="@+id/nav_chat_assistant"
+            android:title="LLM Android Automation Assistant" />
+            
+        <item
+            android:id="@+id/nav_chat_script"
+            android:title="Script Correction Guide" />
+            
+        <item
+            android:id="@+id/nav_chat_variables"
+            android:title="Instance Variables Explanation" />
+            
+        <item
+            android:id="@+id/nav_chat_json"
+            android:title="JSON Formatting Request" />
+            
+        <item
+            android:id="@+id/nav_chat_automator"
+            android:title="UiAutomator vs AccessibilityService" />
+            
+        <item
+            android:id="@+id/nav_chat_adk"
+            android:title="LLM Sub-Agents in ADK" />
+            
+        <item
+            android:id="@+id/nav_chat_espresso"
+            android:title="Espresso UI Testing" />
+            
+        <item
+            android:id="@+id/nav_chat_appium"
+            android:title="How Appium Works" />
+    </group>
+</menu>

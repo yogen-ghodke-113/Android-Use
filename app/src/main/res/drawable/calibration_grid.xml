@@ -1,0 +1,107 @@
+<!-- res/drawable/calibration_grid.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Semi-transparent background to indicate overlay area (optional) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#33000000" /> <!-- Light black overlay -->
+        </shape>
+    </item>
+
+    <!-- Calibration Points (Circles) using Inset -->
+    <!-- Inset pushes the drawable away from the edges by the specified percentage -->
+    <!-- Example: 9 points (10%, 50%, 90% positions approx) -->
+    <!-- Insets define the *padding* around the drawable within the item's bounds -->
+
+    <!-- Top-Left (10%, 10%) -->
+    <item>
+        <inset android:insetLeft="9%" android:insetTop="9%" android:insetRight="89%" android:insetBottom="89%">
+            <shape android:shape="oval">
+                <solid android:color="#FFFF0000"/> <!-- Red -->
+                <size android:width="10dp" android:height="10dp"/>
+                <stroke android:width="1dp" android:color="#FF000000"/> <!-- Black outline -->
+            </shape>
+        </inset>
+    </item>
+     <!-- Top-Center (50%, 10%) -->
+     <item>
+         <inset android:insetLeft="49%" android:insetTop="9%" android:insetRight="49%" android:insetBottom="89%">
+            <shape android:shape="oval">
+                <solid android:color="#FFFFFF00"/> <!-- Yellow -->
+                 <size android:width="10dp" android:height="10dp"/>
+                <stroke android:width="1dp" android:color="#FF000000"/>
+            </shape>
+        </inset>
+     </item>
+    <!-- Top-Right (90%, 10%) -->
+    <item>
+         <inset android:insetLeft="89%" android:insetTop="9%" android:insetRight="9%" android:insetBottom="89%">
+            <shape android:shape="oval">
+                <solid android:color="#FF00FF00"/> <!-- Green -->
+                 <size android:width="10dp" android:height="10dp"/>
+                <stroke android:width="1dp" android:color="#FF000000"/>
+            </shape>
+        </inset>
+    </item>
+    <!-- Mid-Left (10%, 50%) -->
+    <item>
+        <inset android:insetLeft="9%" android:insetTop="49%" android:insetRight="89%" android:insetBottom="49%">
+             <shape android:shape="oval">
+                 <solid android:color="#FF00FFFF"/> <!-- Cyan -->
+                  <size android:width="10dp" android:height="10dp"/>
+                 <stroke android:width="1dp" android:color="#FF000000"/>
+             </shape>
+         </inset>
+     </item>
+    <!-- Center (50%, 50%) -->
+    <item>
+         <inset android:insetLeft="49%" android:insetTop="49%" android:insetRight="49%" android:insetBottom="49%">
+            <shape android:shape="oval">
+                <solid android:color="#FFFFFFFF"/> <!-- White -->
+                 <size android:width="10dp" android:height="10dp"/>
+                <stroke android:width="1dp" android:color="#FF000000"/>
+            </shape>
+         </inset>
+    </item>
+     <!-- Mid-Right (90%, 50%) -->
+     <item>
+         <inset android:insetLeft="89%" android:insetTop="49%" android:insetRight="9%" android:insetBottom="49%">
+            <shape android:shape="oval">
+                <solid android:color="#FFFF00FF"/> <!-- Magenta -->
+                 <size android:width="10dp" android:height="10dp"/>
+                <stroke android:width="1dp" android:color="#FF000000"/>
+            </shape>
+        </inset>
+     </item>
+    <!-- Bottom-Left (10%, 90%) -->
+    <item>
+         <inset android:insetLeft="9%" android:insetTop="89%" android:insetRight="89%" android:insetBottom="9%">
+            <shape android:shape="oval">
+                <solid android:color="#FF0000FF"/> <!-- Blue -->
+                 <size android:width="10dp" android:height="10dp"/>
+                <stroke android:width="1dp" android:color="#FF000000"/>
+            </shape>
+        </inset>
+    </item>
+     <!-- Bottom-Center (50%, 90%) -->
+     <item>
+         <inset android:insetLeft="49%" android:insetTop="89%" android:insetRight="49%" android:insetBottom="9%">
+            <shape android:shape="oval">
+                <solid android:color="#FF808080"/> <!-- Gray -->
+                 <size android:width="10dp" android:height="10dp"/>
+                <stroke android:width="1dp" android:color="#FF000000"/>
+            </shape>
+        </inset>
+     </item>
+    <!-- Bottom-Right (90%, 90%) -->
+    <item>
+         <inset android:insetLeft="89%" android:insetTop="89%" android:insetRight="9%" android:insetBottom="9%">
+             <shape android:shape="oval">
+                 <solid android:color="#FF000000"/> <!-- Black -->
+                 <size android:width="10dp" android:height="10dp"/>
+                 <stroke android:width="1dp" android:color="#FFFFFFFF"/> <!-- White outline -->
+             </shape>
+         </inset>
+    </item>
+
+</layer-list> 

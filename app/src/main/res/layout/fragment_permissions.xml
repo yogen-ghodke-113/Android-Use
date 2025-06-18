@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".ui.permissions.PermissionsFragment"> // Assuming package ui.permissions
+
+    <TextView
+        android:id="@+id/permissions_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Permissions Required" 
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:textAlignment="center"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/permissions_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="To automate tasks and understand your screen, Android-Use needs a couple of special permissions. We only use these to perform actions you request."
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/permissions_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Accessibility Permission Section -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_accessibility"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/permissions_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Accessibility Service" 
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Allows the app to read screen content and perform taps/swipes on your behalf."/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_grant_accessibility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Grant Accessibility"
+                app:icon="@drawable/ic_accessibility_24" /> 
+
+            <TextView
+                android:id="@+id/status_accessibility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Status: Not Granted"
+                android:textStyle="italic"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Screen Capture Permission Section -->
+     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_screen_capture"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/card_accessibility"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Screen Capture" 
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Allows the app to take screenshots for the AI to visually analyze the screen. We do not record your screen."/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_grant_screen_capture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Grant Screen Capture"
+                app:icon="@drawable/ic_screenshot_24"/> 
+
+             <TextView
+                android:id="@+id/status_screen_capture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Status: Not Granted"
+                android:textStyle="italic"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonNextToChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next: Calibrate"
+        android:enabled="false" 
+        app:icon="@drawable/ic_arrow_forward_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout> 

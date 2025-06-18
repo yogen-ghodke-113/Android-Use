@@ -1,0 +1,39 @@
+# Core ADK dependency
+google-adk  # Upgrading to v0.3.0
+# google-adk==0.2.0  # Downgrading as requested
+# Google AI dependency for Gemini models
+google-generativeai # Ensure compatibility
+# Google Cloud Vision dependency
+# google-cloud-vision
+httpx
+# Web Server Dependencies
+fastapi
+#uvicorn[standard]>=0.34.0
+uvicorn[standard]
+pydantic
+python-dotenv # For loading .env file in local development
+setuptools
+python-multipart
+# Added for potential Vertex AI use
+google-cloud-aiplatform # Updated for potential newer Vertex features if needed indirectly
+google-adk[litellm]
+# Added for websockets support
+websockets
+# Added for Google API Python client
+google-api-python-client
+# Added for Google Auth HTTP and OAuth
+google-auth-httplib2 # Common transport adapter
+google-auth-oauthlib # If needed for user auth flows (maybe not for ADC)
+# Added for robust JSON parsing
+lark
+# Added for Google Cloud Logging
+google-cloud-logging
+# Added for Google Cloud Secret Manager
+google-cloud-secret-manager
+google-cloud-firestore
+packaging
+# Added for asynchronous I/O
+nest-asyncio
+# Added for system monitoring
+psutil
+litellm==1.67.1 # Add LiteLLM
